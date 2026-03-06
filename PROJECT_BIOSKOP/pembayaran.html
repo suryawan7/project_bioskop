@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pembayaran - Tiket Bioskop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+</head>
+<body class="bg-gray-900 text-white">
+
+  <nav class="bg-gray-800 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-xl font-bold text-yellow-400">🎬 Bioskop Online</a>
+      <a href="index.html" class="hover:text-yellow-300">Kembali</a>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-4 py-10">
+    <h1 class="text-2xl font-bold text-center text-yellow-400 mb-6">Pembayaran Tiket</h1>
+
+    <div id="ticketDetails" class="bg-gray-800 p-6 rounded-xl shadow space-y-6 mb-6 border border-gray-700"></div>
+
+    <form id="paymentForm" class="bg-gray-800 p-6 rounded-xl shadow space-y-6 border border-gray-700">
+      <div>
+        <label for="paymentMethod" class="block font-semibold mb-1 text-white">Metode Pembayaran</label>
+        <select id="paymentMethod" class="w-full border border-gray-600 rounded px-4 py-2 bg-gray-700 text-white" required>
+          <option value="">-- Pilih Metode Pembayaran --</option>
+          <option value="QRIS">QRIS</option>
+        </select>
+      </div>
+
+      <div class="text-center">
+        <button id="payBtn" type="submit" class="bg-yellow-500 text-gray-900 px-6 py-2 rounded hover:bg-yellow-400 disabled:opacity-50" disabled>Bayar Sekarang</button>
+      </div>
+    </form>
+
+    <div id="qrisContainer" class="mt-6 hidden text-center">
+      <h2 class="text-xl font-bold mb-2 text-yellow-300">QRIS Pembayaran</h2>
+      <canvas id="qrisBarcode" class="mb-4 mx-auto cursor-pointer bg-white rounded shadow-xl p-2"></canvas>
+      <p id="timeoutMessage" class="text-green-400 font-semibold hidden">✅ Pembayaran berhasil!</p>
+      <p class="text-sm text-white-600">KARNA INI SIMULASI QRIS LANGSUNG KLIK SAJA</p>
+    </div>
+  </main>
+
+  <footer class="bg-gray-800 text-white text-center py-6 mt-10 border-t border-gray-700">
+    <p class="text-sm">&copy; 2025 Bioskop Online. All Rights Reserved.</p>
+  </footer>
+
+  <script src="pembayaran.js"></script>
+</body>
+</html>

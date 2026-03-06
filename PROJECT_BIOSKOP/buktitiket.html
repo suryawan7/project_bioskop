@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bukti Pemesanan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> <!-- CDN jsPDF -->
+</head>
+<body class="bg-gray-900 text-white">
+  <nav class="bg-gray-800 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="menu.html" class="text-xl font-bold text-yellow-400">🎬 Bioskop Online</a>
+      <a href="menu.html" class="hover:text-yellow-300">Kembali ke Menu</a>
+    </div>
+  </nav>
+
+  <main class="max-w-2xl mx-auto px-4 py-12 text-center">
+    <h1 class="text-3xl font-bold text-yellow-400 mb-6">🎉 Tiket Berhasil Dipesan!</h1>
+    <div id="bukti" class="bg-gray-800 p-6 rounded-xl border border-yellow-500 text-left shadow-lg space-y-4"></div>
+    <a id="downloadBtn" href="#" class="mt-6 inline-block px-6 py-2 bg-yellow-500 text-black font-semibold rounded hover:bg-yellow-400 transition">Download Bukti Tiket</a>
+  </main>
+
+  <footer class="bg-gray-800 text-white text-center py-6 mt-10 border-t border-gray-700">
+    <p class="text-sm">&copy; 2025 Bioskop Online. All Rights Reserved.</p>
+  </footer>
+  <script src="buktitiket.js"></script>
+</body>
+</html>
